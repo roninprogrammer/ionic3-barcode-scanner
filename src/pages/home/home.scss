@@ -1,3 +1,39 @@
 page-home {
+    .header {
+        -webkit-flex: 1.5 !important;
+        -webkit-align-items: center;
+        background-color: #1abc9c;
+   }
 
+   .toolbar-background {
+    background-color: black;
+  }
+
+  .toolbar-title-md {
+      color: #ffffff;
+  }
+    
+   .icon-row {
+        -webkit-align-items: center;
+   }
+
+   .home-container {
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    height: 100%;
+}
+    .home-container > .row {
+     -webkit-flex: 1;
+    }
+
+
+    .Scan{
+        background: #1b1b1b;
+        color: #1b1b1b;
+      }
+    
+      .Scan-button {
+        color: #ffffff;
+        background-color:#1b1b1b;
+      }
 }

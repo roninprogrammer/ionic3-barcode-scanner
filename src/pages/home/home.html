@@ -1,14 +1,39 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
+    <ion-title style="text-align: center">
+      SCANNER
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding >
+   <ion-label style="text-align: center">SELECT SCANNER BY SCENARIO</ion-label> 
+   <p style="text-align: center;font-size: 10px">Using IONIC Framework </p> 
+   <hr width="80%">
+   <ion-grid>
+      <ion-row>
+          <ion-col col-sm-12 col-xl-12 col-md-6 col-lg-6 style="width: 100%;">
+            <button ion-button class="Scan-button" (click)="scanMulti()">Multiple Codes/Label Scanning</button>
+          </ion-col>
+          <ion-col col-sm-12 col-xl-12 col-md-6 col-lg-6 style="width: 100%;" >
+            <button ion-button class="Scan-button" (click)="scanFar()">Scan From Far Away</button>
+          </ion-col>
+          <ion-col col-sm-12 col-xl-12 col-md-6 col-lg-6 style="width: 100%;">
+              <button ion-button class="Scan-button" (click)="scanQR()">Scan QR CODES</button>
+          </ion-col>
+          <ion-col col-sm-12 col-xl-12 col-md-6 col-lg-6 style="width: 100%;"> 
+            <button ion-button class="Scan-button" (click)="scan2D()">Scan 2D BarCodes</button>
+          </ion-col>
+          <ion-col col-sm-12 col-xl-12 col-md-6 col-lg-6 style="width: 100%;">
+              <button ion-button class="Scan-button" (click)="scanAnyCode()">Scan Any Codes</button>
+          </ion-col>
+      </ion-row>
+      </ion-grid>    
+      <hr width="80%">
+      <ion-label style="text-align: center">SCANNER USING THIRD PARTY LIBRARY</ion-label> 
+      <ion-grid>
+          <ion-col col-sm-12 col-xl-12 col-md-6 col-lg-6 style="text-align: center;">
+              <button ion-button class="Scan-button" (click)="scanAnyCode()">SCANDIT SDK</button>
+          </ion-col>
+      </ion-grid>
 </ion-content>

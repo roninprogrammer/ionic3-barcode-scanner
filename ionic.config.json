@@ -1,5 +1,7 @@
 {
   "name": "ionic_poc_21/11/2018",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }
