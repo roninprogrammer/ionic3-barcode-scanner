@@ -24,7 +24,7 @@ export class ScanmultiPage {
   }
   
   back() {
-    this.navCtrl.push(HomePage);
+    this.navCtrl.setRoot(HomePage);
   }
 
 }

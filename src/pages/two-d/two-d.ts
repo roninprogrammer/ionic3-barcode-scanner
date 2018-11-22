@@ -24,6 +24,6 @@ export class TwoDPage {
   }
 
   back() {
-    this.navCtrl.push(HomePage);
+    this.navCtrl.setRoot(HomePage);
   }
 }

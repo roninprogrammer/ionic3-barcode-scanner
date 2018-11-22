@@ -50,6 +50,6 @@ export class ScanQrPage {
 
 
   back() {
-    this.navCtrl.push(HomePage);
+    this.navCtrl.setRoot(HomePage);
   }
 }
