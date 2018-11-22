@@ -9,5 +9,8 @@ import { ScanQrPage } from './scan-qr';
   imports: [
     IonicPageModule.forChild(ScanQrPage),
   ],
+  exports: [
+    ScanQrPage
+  ]
 })
 export class ScanQrPageModule {}

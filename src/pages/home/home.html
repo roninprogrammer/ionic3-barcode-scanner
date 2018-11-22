@@ -7,33 +7,40 @@
 </ion-header>
 
 <ion-content padding >
-   <ion-label style="text-align: center">SELECT SCANNER BY SCENARIO</ion-label> 
-   <p style="text-align: center;font-size: 10px">Using IONIC Framework </p> 
-   <hr width="80%">
-   <ion-grid>
+    <ion-label style="text-align: center">SELECT SCANNER BY</ion-label> 
+    <p style="text-align: center;font-size: 10px">Using IONIC V3 Framework </p> 
+    <hr width="80%">
+    <ion-grid>
       <ion-row>
-          <ion-col col-sm-12 col-xl-12 col-md-6 col-lg-6 style="width: 100%;">
-            <button ion-button class="Scan-button" (click)="scanMulti()">Multiple Codes/Label Scanning</button>
+          <ion-col col-sm-12 col-xl-12 col-md-6 col-lg-6>
+              <button ion-button class="Scan-button" (click)="scanQR()" style="width: 100%;">Scan QR CODES</button>
           </ion-col>
-          <ion-col col-sm-12 col-xl-12 col-md-6 col-lg-6 style="width: 100%;" >
-            <button ion-button class="Scan-button" (click)="scanFar()">Scan From Far Away</button>
+          <ion-col col-sm-12 col-xl-12 col-md-6 col-lg-6 > 
+            <button ion-button class="Scan-button" (click)="scan2D()" style="width: 100%;">Scan 2D BarCodes</button>
           </ion-col>
-          <ion-col col-sm-12 col-xl-12 col-md-6 col-lg-6 style="width: 100%;">
-              <button ion-button class="Scan-button" (click)="scanQR()">Scan QR CODES</button>
+      </ion-row>   
+  <br>
+   <ion-label style="text-align: center">SELECT SCANNER BY</ion-label> 
+   <p style="text-align: center;font-size: 10px">Using Custom Plugin </p> 
+   <hr width="80%">
+      <ion-row>
+          <ion-col col-sm-12 col-xl-12 col-md-6 col-lg-6 >
+            <button ion-button class="Scan-button" (click)="scanMulti()" style="width: 100%;">Multiple Codes/Label Scanning</button>
           </ion-col>
-          <ion-col col-sm-12 col-xl-12 col-md-6 col-lg-6 style="width: 100%;"> 
-            <button ion-button class="Scan-button" (click)="scan2D()">Scan 2D BarCodes</button>
-          </ion-col>
-          <ion-col col-sm-12 col-xl-12 col-md-6 col-lg-6 style="width: 100%;">
-              <button ion-button class="Scan-button" (click)="scanAnyCode()">Scan Any Codes</button>
+          <ion-col col-sm-12 col-xl-12 col-md-6 col-lg-6  >
+            <button ion-button class="Scan-button" (click)="scanFar()"style="width: 100%;">Scan From Far Away</button>
           </ion-col>
       </ion-row>
-      </ion-grid>    
+      <br>
       <hr width="80%">
-      <ion-label style="text-align: center">SCANNER USING THIRD PARTY LIBRARY</ion-label> 
-      <ion-grid>
+      <ion-label style="text-align: center">SCANNER USING </ion-label> 
+      <p style="text-align: center;font-size: 10px">THIRD PARTY LIBRARY </p> 
+      <ion-row>
           <ion-col col-sm-12 col-xl-12 col-md-6 col-lg-6 style="text-align: center;">
-              <button ion-button class="Scan-button" (click)="scanAnyCode()">SCANDIT SDK</button>
+              <button ion-button class="Scan-button" style="width: 100%;" >SCANDIT SDK</button>
           </ion-col>
-      </ion-grid>
+      </ion-row>
+    </ion-grid>
 </ion-content>
+<ion-footer padding>
+</ion-footer>

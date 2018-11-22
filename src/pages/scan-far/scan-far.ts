@@ -1,3 +1,4 @@
+import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -20,6 +21,10 @@ export class ScanFarPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ScanFarPage');
+  }
+
+  back() {
+    this.navCtrl.push(HomePage);
   }
 
 }

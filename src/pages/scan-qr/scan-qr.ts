@@ -1,13 +1,10 @@
+import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner';
-
-/**
- * Generated class for the ScanQrPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+// import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+// import { Toast } from '@ionic-native/toast';
+//import { DataServiceProvider } from '../../providers/data-service/data-service';
+// import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner';
 
 @IonicPage()
 @Component({
@@ -15,8 +12,12 @@ import { QRScanner, QRScannerStatus } from '@ionic-native/qr-scanner';
   templateUrl: 'scan-qr.html',
 })
 export class ScanQrPage {
+  // public barcodeData;
+  // products: any[] = [];
+  // selectedProduct: any;
+  // productFound:boolean = false;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private qrScanner: QRScanner) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
@@ -24,27 +25,31 @@ export class ScanQrPage {
   }
 
   scan(){
-    this.qrScanner.prepare()
-  .then((status: QRScannerStatus) => {
-     if (status.authorized) {
-       // camera permission was granted
-       // start scanning
-       let scanSub = this.qrScanner.scan().subscribe((text: string) => {
-         console.log('Scanned something', text);
+  //   const options = {
+  //     preferFrontCamera: false, // iOS and Android
+  //     showFlipCameraButton: true, // iOS and Android
+  //     showTorchButton: true, // iOS and Android
+  //     torchOn: true, // Android, launch with the torch switched on (if available)
+  //     // prompt: 'Place a barcode inside the scan area', // Android
+  //     // Android, display scanned text for X ms. 0 suppresses it entirely, default 1500
+  //     resultDisplayDuration: 500,
+  //     formats: 'QR_CODE', // default: all but PDF_417 and RSS_EXPANDED
+  //     // Android only (portrait|landscape), default unset so it rotates with the device
+  //     orientation: 'portrait',
+  //     disableAnimations: true, // iOS
+  //     disableSuccessBeep: false // iOS
+  //   };
 
-         this.qrScanner.hide(); // hide camera preview
-         scanSub.unsubscribe(); // stop scanning
-       });
-
-     } else if (status.denied) {
-       // camera permission was permanently denied
-       // you must use QRScanner.openSettings() method to guide the user to the settings page
-       // then they can grant the permission from there
-     } else {
-       // permission was denied, but not permanently. You can ask for permission again at a later time.
-     }
-  })
-  .catch((e: any) => console.log('Error is', e));
+  //   this.barcodeScanner.scan(options).then(barcodeData => {
+  //     console.log('Barcode data', barcodeData);
+  //    }).catch(err => {
+  //        console.log('Error', err);
+  //    });
+  // }
   }
 
+
+  back() {
+    this.navCtrl.push(HomePage);
+  }
 }
